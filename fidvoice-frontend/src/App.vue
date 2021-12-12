@@ -9,16 +9,16 @@
       <div class="navbar-menu">
         <div class="navbar-end">
           <template v-if="$store.state.isAuthenticated">
-            <router-link to="/dashboard" class="navbar-item">Dashboard</router-link>
+            <router-link :to="{name: 'Dashboard'}" class="navbar-item">Dashboard</router-link>
           </template>
           <template v-else>
-            <router-link to="/home" class="navbar-item">Home</router-link>
+            <router-link :to="{name: 'Home'}" class="navbar-item">Home</router-link>
             <div class="navbar-item">
               <div class="buttons">
-                <router-link to="/sign-up" class="button is-success">
+                <router-link :to="{name: 'Signup'}" class="button is-success">
                   <strong>Sign Up</strong>
                 </router-link>
-                <router-link to="/Log In" class="button is-primary">
+                <router-link :to="{name: 'Login'}" class="button is-primary">
                   <strong>Login</strong>
                 </router-link>
               </div>
