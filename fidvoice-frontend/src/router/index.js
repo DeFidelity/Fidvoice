@@ -3,6 +3,9 @@ import Home from '../views/Home.vue'
 import Signup from '../views/Signup.vue'
 import Login from '../views/Login.vue'
 import Dashboard from '../views/dashboard/Dashboard.vue'
+import MyAccount from '../views/dashboard/MyAccount.vue'
+import Customers from '../views/dashboard/Customer.vue'
+import CustomerDetail from '../views/dashboard/CustomerDetail.vue'
 
 
 const routes = [
@@ -24,7 +27,34 @@ const routes = [
   {
     path: '/dashboard',
     name: 'Dashboard',
-    component: Dashboard
+    component: Dashboard,
+    meta: {
+      requirelogin: true
+    }
+  },
+  {
+    path: '/my-account',
+    name: 'MyAccount',
+    component: MyAccount,
+    meta: {
+      requirelogin: true
+    }
+  },
+  {
+    path: '/dashboard/clients',
+    name: 'Customers',
+    component: Customers,
+    meta: {
+      requirelogin: true
+    }
+  },
+  {
+    path: '/dashboard/clients/:id',
+    name: 'CustomerDetail',
+    component: CustomerDetail,
+    meta: {
+      requirelogin: true
+    }
   },
   {
     path: '/about',

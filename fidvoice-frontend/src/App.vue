@@ -10,6 +10,13 @@
         <div class="navbar-end">
           <template v-if="$store.state.isAuthenticated">
             <router-link :to="{name: 'Dashboard'}" class="navbar-item">Dashboard</router-link>
+            <router-link :to="{name: 'Customers'}" class="navbar-item">Clients</router-link>
+
+            <div class="navbar-item">
+              <div class="button">
+                <router-link :to="{name: 'MyAccount'}">My Account</router-link>
+              </div>
+            </div>
           </template>
           <template v-else>
             <router-link :to="{name: 'Home'}" class="navbar-item">Home</router-link>
