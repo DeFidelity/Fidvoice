@@ -32,6 +32,8 @@ CORS_ALLOWED_ORIGINS =[
     "http://127.0.0.1:8000"
 ]
 
+AUTH_USER_MODEL = 'user.User'
+
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES":(
         'rest_framework.authentication.TokenAuthentication',
@@ -49,6 +51,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    'apps.clients',
+    'apps.user',
     
     'rest_framework',
     'rest_framework.authtoken',
