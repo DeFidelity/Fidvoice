@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('fidvoice/api/', include('djoser.urls')),
     path('fidvoice/api/', include('djoser.urls.authtoken')),
+    path('fidvoice/api/', include('apps.clients.urls')),
 ]
